@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420">
+  <rect width="760" height="420" fill="#0f172a"/>
+  <text x="380" y="48" text-anchor="middle" fill="#7dd3fc" font-size="22" font-weight="700">SS系统故障排查流程</text>
+  <g font-size="15" text-anchor="middle">
+    <rect x="250" y="80" width="260" height="52" rx="12" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2"/>
+    <text x="380" y="112" fill="#dbeafe">用户报障（截图+菜单号+单号）</text>
+    <path d="M380 132 L380 158" stroke="#00e5ff" stroke-width="3" marker-end="url(#ar)"/>
+    <rect x="250" y="158" width="260" height="52" rx="12" fill="#155e75" stroke="#22d3ee" stroke-width="2"/>
+    <text x="380" y="190" fill="#ecfeff">定性：集中故障 or 单点问题</text>
+    <path d="M380 210 L380 236" stroke="#00e5ff" stroke-width="3" marker-end="url(#ar)"/>
+    <rect x="60" y="236" width="300" height="60" rx="12" fill="#7c2d12" stroke="#fb923c" stroke-width="2"/>
+    <text x="210" y="262" fill="#ffedd5">集中故障</text>
+    <text x="210" y="284" fill="#ffedd5" font-size="13">上报北京IT · 群内通知勿操作</text>
+    <rect x="400" y="236" width="300" height="60" rx="12" fill="#065f46" stroke="#34d399" stroke-width="2"/>
+    <text x="550" y="262" fill="#d1fae5">单点问题</text>
+    <text x="550" y="284" fill="#d1fae5" font-size="13">查信审/设定/硬件 · 换环境验证</text>
+    <path d="M210 296 L210 322 L380 322" stroke="#00e5ff" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <path d="M550 296 L550 322 L380 322" stroke="#00e5ff" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <rect x="220" y="322" width="320" height="52" rx="12" fill="#4c1d95" stroke="#a78bfa" stroke-width="2"/>
+    <text x="380" y="354" fill="#ede9fe">解决后：群内通知 · 记录沉淀</text>
+  </g>
+  <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#00e5ff"/></marker></defs>
+</svg>

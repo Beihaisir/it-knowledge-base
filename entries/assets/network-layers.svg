@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#0f172a"/>
+  <rect x="20" y="20" width="760" height="480" rx="14" fill="#1e293b" stroke="#00b4d8" stroke-width="2"/>
+  <text x="400" y="64" text-anchor="middle" fill="#7dd3fc" font-size="24" font-weight="700">网络故障分层排查模型</text>
+  <g font-family="monospace" font-size="16">
+    <rect x="120" y="100" width="560" height="56" rx="10" fill="#0c4a6e" stroke="#38bdf8"/>
+    <text x="400" y="134" text-anchor="middle" fill="#e0f2fe">应用层　浏览器 / 业务系统 / DNS 解析</text>
+    <rect x="120" y="176" width="560" height="56" rx="10" fill="#155e75" stroke="#22d3ee"/>
+    <text x="400" y="210" text-anchor="middle" fill="#ecfeff">传输层　TCP/UDP 端口 · 防火墙策略</text>
+    <rect x="120" y="252" width="560" height="56" rx="10" fill="#1e40af" stroke="#60a5fa"/>
+    <text x="400" y="286" text-anchor="middle" fill="#dbeafe">网络层　IP / 路由 / 网关 / ICMP</text>
+    <rect x="120" y="328" width="560" height="56" rx="10" fill="#4c1d95" stroke="#a78bfa"/>
+    <text x="400" y="362" text-anchor="middle" fill="#ede9fe">链路层　VLAN / MAC / 端口协商</text>
+    <rect x="120" y="404" width="560" height="56" rx="10" fill="#7c2d12" stroke="#fb923c"/>
+    <text x="400" y="438" text-anchor="middle" fill="#fff7ed">物理层　网线 / 光模块 / 电源 / 指示灯</text>
+  </g>
+  <path d="M700 432 L700 132" stroke="#00e5ff" stroke-width="3" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#00e5ff"/></marker></defs>
+  <text x="732" y="285" fill="#00e5ff" font-size="14" transform="rotate(90 732 285)">自下而上逐层验证</text>
+</svg>
