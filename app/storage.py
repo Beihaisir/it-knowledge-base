@@ -183,15 +183,32 @@ def load_entries(force: bool = False, limit: int = 2000) -> list:
 
 
 def get_entry(entry_id: str) -> dict | None:
+    # 1. 根目录直查
     p = DATA_DIR / f"{entry_id}.md"
     if p.exists():
         try:
-            return parse_entry_text(p.read_text(encoding="utf-8"), entry_id)
+            return parse_entry_text(p.read_text(encoding="utf-8"), entry_id, p)
         except Exception:
             pass
-    for e in load_entries():
-        if e["id"] == entry_id:
-            return e
+    # 2. 全盘搜索（含子目录）
+    if DATA_DIR.exists():
+        for p in DATA_DIR.rglob(f"{entry_id}.md"):
+            if "pending" in p.parts:
+                continue
+            try:
+                return parse_entry_text(p.read_text(encoding="utf-8"), entry_id, p)
+            except Exception:
+                continue
+    # 3. 从索引找 path 再读磁盘（保证 body 完整）
+    try:
+        for e in load_entries():
+            if e["id"] == entry_id:
+                fp = Path(e.get("path") or "")
+                if fp.is_file():
+                    return parse_entry_text(fp.read_text(encoding="utf-8"), entry_id, fp)
+                return e
+    except Exception:
+        pass
     return None
 
 
